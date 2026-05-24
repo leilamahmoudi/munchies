@@ -2,6 +2,8 @@
 
 A pixel-perfect restaurant discovery app built with Next.js 16. Filter by food category, delivery time, and price range.
 
+> 🐘 Let's address the elephant in the room — I got help from [Claude](https://claude.ai/code).
+
 ## ✨ Features
 
 - 📱 **Mobile-first splash screen** — `/welcome` with the full green treatment before the app loads
@@ -46,9 +48,10 @@ npm start
 
 # Lint
 npm run lint
-```
 
-> **Note:** No test runner is configured yet.
+# Run tests (single pass)
+npm run test:run
+```
 
 ---
 
@@ -124,7 +127,6 @@ Matched to a Figma file. Key decisions:
 
 ## 🐛 Known Limitations
 
-- No test runner — we trust the vibes
 - Open status is fetched per card — lots of waterfall requests, but the skeletons look great
 
 ---

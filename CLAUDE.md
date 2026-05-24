@@ -23,7 +23,7 @@ Munchies is a restaurant discovery app. Users browse and filter restaurants by f
 - **Styling**: Tailwind CSS v4 (CSS-first, no `tailwind.config.*`) + inline styles for Figma-exact values
 - **Component library**: none — all components are custom
 - **State management**: React `useState` for filter state in `page.tsx`; TanStack Query v5 for server state
-- **Testing**: none configured
+- **Testing**: Vitest + React Testing Library
 - **Build tooling**: Turbopack (default), ESLint flat config
 - **Data**: external REST API, no database
 
@@ -93,9 +93,11 @@ src/types/index.ts           # all shared TypeScript types
 
 ## 7. Testing and Quality Bar
 
-- No test runner configured — do not add one without being asked
-- Before marking any task done: run `npm run lint` and `npm run build` — both must pass
-- **"Done" means**: matches Figma visually + no lint errors + build succeeds
+- **Test runner**: Vitest + React Testing Library
+- `npm run test:run` — single pass (CI); `npm run test` — watch mode
+- **What's covered**: `toggleSet` utility (`src/lib/utils.ts`), `FilterButton` component
+- Before marking any task done: run `npm run lint`, `npm run build`, and `npm run test:run` — all must pass
+- **"Done" means**: matches Figma visually + no lint errors + build succeeds + tests pass
 
 ---
 
@@ -129,9 +131,9 @@ npm run dev       # start dev server (Turbopack, localhost:3000)
 npm run build     # production build — run to verify no errors
 npm run start     # serve production build
 npm run lint      # ESLint (flat config — use this, not `next lint`)
+npm run test:run  # run all tests (single pass)
+npm run test      # run tests in watch mode
 ```
-
-No test runner is configured.
 
 ---
 
