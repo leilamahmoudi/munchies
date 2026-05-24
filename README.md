@@ -21,7 +21,6 @@ A pixel-perfect restaurant discovery app built with Next.js 16. Filter by food c
 
 | Thing | Why |
 | ----- | --- |
-
 | **Next.js 16** | App Router, Turbopack |
 | **React 19** | last version |
 | **TypeScript** | Because `any` is a cry for help |
