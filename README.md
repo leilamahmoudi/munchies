@@ -70,7 +70,9 @@ src/
 │   │   ├── FilterSidebar.tsx         # Desktop left sidebar (lg+)
 │   │   ├── FilterTopbar.tsx          # Horizontal category scroll (all sizes)
 │   │   ├── MobileDeliveryFilter.tsx  # Delivery time pills (mobile only)
-│   │   └── FilterButton.tsx          # Reusable filter pill button
+│   │   ├── FilterButton.tsx          # Reusable filter pill button
+│   │   └── __tests__/
+│   │       └── FilterButton.test.tsx # Component render + interaction tests
 │   ├── restaurant/
 │   │   ├── RestaurantCard.tsx         # The star of the show
 │   │   ├── RestaurantCardSkeleton.tsx # Card-shaped loading state
@@ -89,9 +91,16 @@ src/
 │   └── usePriceRangeMap.ts   # Batch price range map
 ├── lib/
 │   ├── api.ts         # All API calls (BASE_URL lives here)
-│   └── queryKeys.ts   # TanStack Query key factory
+│   ├── queryKeys.ts   # TanStack Query key factory
+│   ├── utils.ts       # toggleSet + DELIVERY_BUCKETS (shared pure functions)
+│   └── __tests__/
+│       └── utils.test.ts  # Unit tests for filter utilities
+├── test/
+│   └── setup.ts       # Vitest + jest-dom setup
 └── types/
     └── index.ts       # Shared TypeScript types
+
+vitest.config.ts       # Vitest config (jsdom, path aliases)
 ```
 
 ---
